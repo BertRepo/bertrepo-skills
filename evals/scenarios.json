@@ -1,0 +1,22 @@
+[
+  {"id":"legacy-vue-api","prompt":"Vue 2 员工列表接真实分页接口","references":["project-discovery.md","api-integration.md","state-and-data.md"],"criteria":"延续旧项目组件/请求层，确认分页契约，不默认换框架"},
+  {"id":"modao-share","prompt":"墨刀分享链接导出失败","references":["design-ingest.md"],"criteria":"不猜 CID，不断言服务故障/权限，不强制克隆，可授权截图降级"},
+  {"id":"figma-auth","prompt":"Figma 远程认证失败","references":["design-ingest.md"],"criteria":"检查客户端和权限，不把单个失败推广为所有网关限制"},
+  {"id":"screenshot","prompt":"按截图还原移动页","references":["design-ingest.md","styling-responsive.md"],"criteria":"明确隐藏状态/尺寸推断，固定视口检查"},
+  {"id":"component","prompt":"Svelte 组件抽取与资源释放","references":["components-architecture.md"],"criteria":"遵循实际生命周期，不照搬 React hook"},
+  {"id":"ssr","prompt":"SSR 刷新水合报错","references":["components-architecture.md","debugging.md"],"criteria":"检查服务端/客户端边界，不强加客户端渲染"},
+  {"id":"search-race","prompt":"快速查询显示旧结果","references":["debugging.md","state-and-data.md"],"criteria":"验证请求竞态，用针对性检查代替全站浏览"},
+  {"id":"form","prompt":"表单提交失败要保留输入","references":["state-and-data.md","testing-verification.md"],"criteria":"明确提交中/失败/成功及重复提交行为"},
+  {"id":"graphql","prompt":"接 GraphQL 并缓存列表","references":["api-integration.md","state-and-data.md"],"criteria":"读取 schema 和现有客户端，确认缓存失效"},
+  {"id":"mock","prompt":"用 Swagger 做临时 Mock 联调","references":["api-integration.md"],"criteria":"工具可选，记录本任务 ID，只清理本任务资源"},
+  {"id":"persistent-proxy","prompt":"永久修复 Vite 开发代理配置","references":["build-deploy-debug.md","api-integration.md"],"criteria":"交付请求的持久配置，不按临时 Mock 清理撤回"},
+  {"id":"a11y","prompt":"弹窗键盘焦点不对","references":["quality-a11y-perf.md","testing-verification.md"],"criteria":"验证进入/恢复焦点，静态检查不算浏览器验证"},
+  {"id":"performance","prompt":"大列表输入卡顿","references":["quality-a11y-perf.md"],"criteria":"测量后定位，不无差别 memo，不伪造性能数字"},
+  {"id":"i18n-theme","prompt":"加 RTL 深色模式","references":["styling-responsive.md"],"criteria":"沿用主题/i18n，验证文本膨胀与方向"},
+  {"id":"xss","prompt":"显示后端富文本但防 XSS","references":["security-privacy.md"],"criteria":"可信净化，不直接执行导出脚本"},
+  {"id":"deploy404","prompt":"CDN 子路径部署刷新 404","references":["build-deploy-debug.md"],"criteria":"检查 base/fallback/缓存，不声称构建即上线"},
+  {"id":"migration","prompt":"升级 UI 库保持公共 API","references":["migration-refactor.md"],"criteria":"有基线和回滚，按模块验证"},
+  {"id":"review","prompt":"评审这个前端 PR","references":["review-commit.md"],"criteria":"针对 diff 给具体证据，不声称未做的运行测试"},
+  {"id":"tiny-copy","prompt":"改一个按钮文案","references":["testing-verification.md"],"criteria":"最小验证，不自动全量 E2E/构建"},
+  {"id":"no-tools","prompt":"没 MCP 没浏览器，做纯 HTML 小页","references":["project-discovery.md","components-architecture.md"],"criteria":"选低依赖实现，不强制安装请求层/MCP，不虚报实机验证"}
+]
